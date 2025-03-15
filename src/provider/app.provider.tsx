@@ -1,7 +1,13 @@
+import { AppContext, initialAppContext } from '@/contexts/app.context'
 import React, { useState } from 'react'
-import { AppContext, initialAppContext } from './app.context'
 
-export const AppProvider = ({ children }: { children: React.ReactNode }) => {
+type Props = {
+  children: React.ReactNode
+}
+
+export const AppProvider = (props: Props) => {
+  const { children } = props
+
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(initialAppContext.isAuthenticated)
 
   return <AppContext.Provider value={{ isAuthenticated, setIsAuthenticated }}>{children}</AppContext.Provider>

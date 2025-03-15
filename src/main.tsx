@@ -5,15 +5,12 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App.tsx'
 import './index.css'
 import store from './store/index.ts'
-import { AppProvider } from './contexts/app.provider.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <Provider store={store}>
-        <AppProvider>
-          <App />
-        </AppProvider>
+        <App />
       </Provider>
     </BrowserRouter>
   </StrictMode>

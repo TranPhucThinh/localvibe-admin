@@ -1,10 +1,10 @@
-import './App.css'
-import useRouteElements from './useRouteElements'
+import { AppProvider } from '@/provider/app.provider'
+import useRouteElements from '@/routes/useRouteElements'
 
-function App() {
+const App = () => {
   const routeElements = useRouteElements()
 
-  return routeElements
+  return <AppProvider>{routeElements}</AppProvider>
 }
 
 export default App

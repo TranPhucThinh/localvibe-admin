@@ -1,5 +1,5 @@
 import { createContext } from 'react'
-import { getAccessTokeFromLS, getProfileFromLS } from '@/utils/auth'
+import { getProfileFromLS } from '@/utils/auth'
 
 interface AppContextInterface {
   isAuthenticated: boolean
@@ -7,7 +7,7 @@ interface AppContextInterface {
 }
 
 export const initialAppContext = {
-  isAuthenticated: true,
+  isAuthenticated: false,
   setIsAuthenticated: () => null,
   profile: getProfileFromLS(),
   setProfile: () => null
